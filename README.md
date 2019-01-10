@@ -45,7 +45,7 @@ must be converted to a 3D array, e.g.:
 `data = np.atleast_3d(data).reshape((10,1,10))`
 
 
-The data is also assumed to be on a regular grid with radius in the domain [0,1] and azimuth between [0,2pi].
+The data is also assumed to be on a regular grid with radius in the domain [0,1] and azimuth between [0, 2pi].
 
 
 With that the 'flow' class can be initialised with the data:
