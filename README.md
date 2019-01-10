@@ -47,6 +47,7 @@ The data is also assumed to be on a regular grid with radius in the domain [0,1]
 
 With that the 'flow' class can be initialised with the data:
 `from core_flow import flow
+
 f = flow(data)`
 
 
