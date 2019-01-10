@@ -7,17 +7,17 @@ This module will take 2D polar coordinate data and create still plots or time va
 
 Animations can be generated from just 1 line of code, e.g.:
 
-`import numpy as np
-from core_flow import flow
+`import numpy as np`
+`from core_flow import flow`
 
-#generate some random data
-data = np.random.rand(10,10,10) #10 points in radius, azimuth and time
+generate some random data
+`data = np.random.rand(10,10,10) #10 points in radius, azimuth and time`
 
-#load data into flow class
-f = flow(data)
+load data into flow class
+`f = flow(data)`
 
-#generate the animation
-f.plot_contours(animate=True)`
+plot the animation
+`f.plot_contours(animate=True)`
 
 
 # Installation
