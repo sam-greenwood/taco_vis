@@ -36,8 +36,11 @@ Python 3 with numpy and matplotlib is required for this module to run. Clone thi
 
 data must be a 3D numpy array. The dimensions of the array correspond to the number of points in radius, azimuth and time repsectively. If for example you have data which does not depend on one of these (e.g. torsional wave data does not depend on azimuth), make the size of that dimension 1 but it must still be a 3D array, e.g.:
 
-`import numpy as np
-data = np.random.rand(10,10) #random data with 10 points in radius and time` must be converted to a 3D array, e.g.:
+`import numpy as np`
+
+`data = np.random.rand(10,10) #random data with 10 points in radius and time`
+
+must be converted to a 3D array, e.g.:
 
 `data = np.atleast_3d(data).reshape((10,1,10))`
 
@@ -46,9 +49,9 @@ The data is also assumed to be on a regular grid with radius in the domain [0,1]
 
 
 With that the 'flow' class can be initialised with the data:
-`from core_flow import flow
+`from core_flow import flow`
 
-f = flow(data)`
+`f = flow(data)`
 
 
 There are 3 types of plot available: contours, cylinders and cylinders_3D. The same 3 keyword arguments are available for each and do the same thing:
