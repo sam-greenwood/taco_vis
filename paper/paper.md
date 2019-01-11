@@ -32,7 +32,7 @@ The dynamics of liquid planetary cores is fundamental to planetary-scale phenome
 In rapidly-rotating planets such as Earth, one important type of dynamical behaviour is longitudinal 'torsional' oscillations of concentric cylinders aligned with the rotation axis, each of which spans the height of the spherical core.
 
 <p align="center">
-  <img src="images/cartoon_cylinders.png" alt="cartoon" width="600"/>
+  <img src="images/cartoon_cylinders.png" alt="cartoon" width="450"/>
 </p>
 
 
