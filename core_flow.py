@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 from matplotlib.patches import Polygon
 from matplotlib.collections import PatchCollection
-plt.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg' #If using ffmpeg to encode, file path to executible must be specified here.
+#plt.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg' #If using ffmpeg to encode, file path to executible must be specified here.
 import matplotlib.animation as anim
 
 ########################################################################################
