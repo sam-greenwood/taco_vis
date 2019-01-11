@@ -31,9 +31,8 @@ The dynamics of liquid planetary cores is fundamental to planetary-scale phenome
 
 In rapidly-rotating planets such as Earth, one important type of dynamical behaviour is longitudinal 'torsional' oscillations of concentric cylinders aligned with the rotation axis, each of which spans the height of the spherical core.
 
-![cartoon](images/cartoon_cylinders.png)
 <p align="center">
-  <img src="images/cartoon_cylinders.png" alt="cartoon" width="200"/>
+  <img src="images/cartoon_cylinders.png" alt="cartoon" width="600"/>
 </p>
 
 
@@ -49,15 +48,26 @@ Although torsional oscillations, given by the azimuthal component of velocity, $
 
  In this paper, we present a simple python module which takes planetary core flow data (in polar coordinates) and produces either static plots or animations of it. Data that varies spatially in both radius and azimuth can be contour plotted (figure 2) whilst torsional wave data may be visualised by cylinders in either a 2D or 3D view (figure 3). To make the cylindrical movement visible, we add a dotted-texture to each cylinder, which is advected as a tracer.
 
-![contour plot](images/example_contour.png)
+
+<p align="center">
+  <img src="images/example_contour.png" alt="contour plot" width="600"/>
+</p>
 
 **Figure 2.** Simple contour plot of example data that varies sinusoidally in radius and azimuth.
 
-![2D cylinders plot](images/example_cylinders.png)
+
+
+<p align="center">
+  <img src="images/example_cylinders.png" alt="2D cylinders plot" width="600"/>
+</p>
 
 **Figure 3.** 2D visualisation of data from Cox et al. [@cox2014forward] approximated to 15 cylinders The velocity scale shown is non-dimensional.
 
-![3D cylinders plot](images/example_cylinders_3D.png)
+
+
+<p align="center">
+  <img src="images/example_cylinders_3D.png" alt="3D cylinders plot" width="600"/>
+</p>
 
 **Figure 3.** 3D visualisation of the same data as the previous figure.
 
