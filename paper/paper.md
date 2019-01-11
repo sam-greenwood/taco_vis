@@ -29,7 +29,7 @@ core_flow provides a simple set of python visualisation tools for 2D flow veloci
 
 The dynamics of liquid planetary cores is fundamental to planetary-scale phenomena such as the generation of a magnetic field. Understanding the relevant processes is a complex task because the fluid motion includes a wide range of convective and oscillatory behaviour. Visualisation of models, based either on observational data or computer simulations, is a key part of both scientific exploration and communication particularly to non-specialist audiences.
 
-In rapidly-rotating planets such as Earth, one important type of dynamical behaviour is longitudinal ``torsional`` oscillations of concentric cylinders aligned with the rotation axis, each of which spans the height of the spherical core.
+In rapidly-rotating planets such as Earth, one important type of dynamical behaviour is longitudinal 'torsional' oscillations of concentric cylinders aligned with the rotation axis, each of which spans the height of the spherical core.
 
 ![cartoon](images/cartoon_cylinders.png)
 
