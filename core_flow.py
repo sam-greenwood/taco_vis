@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import matplotlib
 from matplotlib.patches import Polygon
 from matplotlib.collections import PatchCollection
-#plt.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg' #If using ffmpeg to encode, file path to executible must be specified here.
 import matplotlib.animation as anim
 
 ########################################################################################
@@ -45,7 +44,6 @@ class flow:
         self.fps=24
 
         self.c_scale = np.max(np.abs(data[:]))
-
 
         #Assume that if only 1 point in theta is given, flow is not theta dependant.
         #Add in more theta points purely for contour plotting resolution
@@ -253,7 +251,7 @@ class flow:
             if save:
 
                 print('Saving file '+movie_filename+' at '+str(dpi)+'dpi and '+str(fps)+'fps')
-                self.ani.save(movie_filename)
+                self.ani.save(movie_filename,dpi=dpi,fps=fps)
                 print('\nSAVED')
 
             else:
