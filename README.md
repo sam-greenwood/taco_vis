@@ -88,4 +88,4 @@ There are a few other settings which are saved as attributes in the 'flow' class
 You may run problems with matplotlib interfacing with ffmpeg to save animations.
 
 If you get something along the lines of: `ValueError: Invalid file object: <_io.BufferedReader name=X>` where `X` is some number, your binary of ffmpeg may not be working. This can be common if you are using an environment manager, such as anaconda and may be solved by installing the ffmpeg binary to your system yourself and setting: `matplotlib.pyplot.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg'` (or wherever you have installed it)
-immedietly after `import matlplotlib` to force it to use that one, rather than the ffmpeg inside the anaconda path.
+immedietly after `import matplotlib` to force it to use that one, rather than the ffmpeg inside the anaconda path.
