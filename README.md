@@ -80,7 +80,7 @@ The same as 'cylinders' but instead the plot is a 3D representation of the cylid
 
 ---
 
-There are a few other settings which are saved as attributes in the 'flow' class which can be printed to the screen with the classes __call__ method, including: filenames for saved images/movies, fps of movies etc.
+There are a few other settings which are saved as attributes in the 'flow' class which can be printed to the screen with the class __call__ method, including: filenames for saved images/movies, fps of movies etc.
 
 
 # Known issues
