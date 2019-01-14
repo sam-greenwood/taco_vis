@@ -4,13 +4,6 @@ Python module for visualising torsional oscillations (and other 2D core flow) fo
 
 This module will take 2D polar coordinate data and create still plots or time varying animations of it, with a focus on torsional oscillations.  Data can be simply contoured (for any 2D dataset) or be represented as differentially rotating cylinders in either 2D or 3D (for torsional wave data only).
 
-<p align="center">
-  <img src="paper/images/example_contour.png" width="450" />
-  <img src="paper/images/example_cylinders.png" width="450" />
-  <img src="paper/images/example_cylinders_3D.png" width="450" />
-</p>
-
-
 
 Animations can be generated simply and quickly with minimal lines of code, e.g.:
 
@@ -73,17 +66,29 @@ There are 3 types of plot available: contours, cylinders and cylinders_3D. The s
 
 The input data can vary in radius, azimuth and time, with a filled contour plot produced at each time interval. The colour scale is automatically scaled to the values within the data and to be symmetric about a value of 0.
 
+<p align="center">
+  <img src="paper/images/example_contour.png" width="450" />
+</p>
+
 #### cylinders
 
 `flow.cylinders(self,animate=False,save=False,time_idx=0)`
 
 The input data is angular velocity (radians per unit time) and depends on radius and time (azimuth dimension only has size 1). This produces a 2D plot with concentric circles representing concetric cylinders (with radii at the radial grid points in the data). A series of black dots are plotted on each cylinder and are advected to visualise the sense of rotation. The cylinders are coloured by the value of velocity at that time interval.
 
+<p align="center">
+  <img src="paper/images/example_cylinders.png" width="450" />
+</p>
+
 #### cylinders_3D
 
 `flow.cylinders_3D(self,animate=False,save=False,time_idx=0)`
 
 The same as 'cylinders' but instead the plot is a 3D representation of the cylidners within a sphere. Although the plot looks 3D it is actually rendered on 2D axes, circumventing the current bugs with drawing on 3D axes in matplotlib.
+
+<p align="center">
+  <img src="paper/images/example_cylinders_3D.png" width="450" />
+</p>
 
 ---
 
