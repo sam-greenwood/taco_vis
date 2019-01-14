@@ -251,7 +251,7 @@ class flow:
             if save:
 
                 print('Saving file '+movie_filename+' at '+str(dpi)+'dpi and '+str(fps)+'fps')
-                self.ani.save(movie_filename,dpi=dpi,fps=fps)
+                self.ani.save(movie_filename,dpi=dpi,fps=fps,writer='ffmpeg')
                 print('\nSAVED')
 
             else:

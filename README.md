@@ -5,30 +5,31 @@ Python module for visualising torsional oscillations (and other 2D core flow dat
 This module will take 2D polar coordinate data and create still plots or time varying animations of it, with a focus on torsional oscillations within a planetary interior.  Data can be simply contoured or (for torsional waves) be represented as differentially rotating cylinders in either 2D or 3D.
 
 
-Animations can be generated from just 1 line of code, e.g.:
+Animations can be generated simply and quickly with minimal lines of code, e.g.:
 
 `import numpy as np`
 
 `from core_flow import flow`
 
-generate some random data:
+`data = np.random.rand(10,10,10)` generate some random data
 
-`data = np.random.rand(10,10,10) #10 points in radius, azimuth and time`
+`f = flow(data)` load data into flow class:
 
-load data into flow class:
-
-`f = flow(data)`
-
-plot the animation:
-
-`f.plot_contours(animate=True)`
+`f.plot_contours(animate=True)` plot the animation:
 
 
 # Installation
 
-Python 3 with numpy and matplotlib is required for this module to run. Clone this repository then either:
-1. copy core_flow.py to your working directory (if you just want this accesible from that directory)
-2. run the setup file with "python setup.py" from the command line (if you would like to add the module to the python path)
+Python 3, numpy and matplotlib (and ffmpeg to save movie files) are required for this module to run. Clone this repository then either:
+1. copy core_flow.py to your working directory (if you just want this accesible from that directory) and install the required dependencies
+2. run the setup file with "python setup.py" from the command line, installing the module and it's dependencies.
+
+# Dependencies
+1. Python 3
+2. numpy
+3. matplotlib
+4. ffmpeg (for saving animations as movie files)
+
 
 
 
@@ -38,17 +39,16 @@ data must be a 3D numpy array. The dimensions of the array correspond to the num
 
 `import numpy as np`
 
-`data = np.random.rand(10,10) #random data with 10 points in radius and time`
+`data = np.random.rand(10,10)` random data with 10 points in radius and time must be converted to a 3D array, e.g.:
 
-must be converted to a 3D array, e.g.:
-
-`data = np.atleast_3d(data).reshape((10,1,10))`
+`data = data.reshape((10,1,10))`
 
 
 The data is also assumed to be on a regular grid with radius in the domain [0,1] and azimuth between [0, 2pi].
 
 
 With that the 'flow' class can be initialised with the data:
+
 `from core_flow import flow`
 
 `f = flow(data)`
@@ -78,5 +78,14 @@ The input data is angular velocity (radians per unit time) and depends on radius
 
 The same as 'cylinders' but instead the plot is a 3D representation of the cylidners within a sphere. Although the plot looks 3D it is actually rendered on 2D axes, circumventing the current bugs with drawing on 3D axes in matplotlib.
 
+---
 
 There are a few other settings which are saved as attributes in the 'flow' class which can be printed to the screen with the classes __call__ method, including: filenames for saved images/movies, fps of movies etc.
+
+
+# Known issues
+
+You may run problems with matplotlib interfacing with ffmpeg to save animations:
+
+If you get something along the lines of: `ValueError: Invalid file object: <_io.BufferedReader name=X>` where `X` is some number, your binary of ffmpeg may not be working. This can be common if you are using an environment manager, such as anaconda and may be solved by installing the ffmpeg binary to your system yourself and setting: `matplotlib.pyplot.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg'` (or wherever you have installed it)
+immedietly after `import matlplotlib` to force it to use that one, rather than the ffmpeg inside the anaconda path.

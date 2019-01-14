@@ -18,35 +18,24 @@ data = flow_func(R,TH,T)
 #Read data into flow class
 f = cf.flow(data)
 
-
-#Check potential error with movie writer executible file path needing to be specified.
-print('-------------')
-print('animation writer is set to: '+plt.rcParams['animation.writer'])
-text = 'animation.'+plt.rcParams['animation.writer']+'_path'
-try:
-    print('The path to this writer\'s executible is: '+plt.rcParams[text])
-    print('If saving an animatino errors, you may need to set the matplotlib.pyplot.rcParams['+text+'] variable to the correct path')
-    print('e.g. \'plt.rcParams[\'animation.ffmpeg_path\'] = \'/usr/local/bin/ffmpeg\'\'')
-    print('-------------')
-except:
-    raise ValueError('Encoder not recognised. Should be set to ffmpeg (recommended) or menconder')
-
-
+#Output movie and images should be the same as contained in the 'test_files' folder of this repo.
 
 #Test contour plot_contours
 f.colorbar_title = 'Non-dimensional\nvelocity'
 f.movie_filename = 'test_contour.mp4'
 f.plot_contours(animate=True,save=True)
-plt.close('all')
+plt.close('all') #If plotting another image, close this animation figure first.
 
 
 #Test cylindrical plots
 data = data[:,14,:].reshape((10,1,50)) #take a slice in theta and retain a 3D array
 f = cf.flow(data)
 
+f.image_filename = 'test_cylinders.png'
 f.colorbar_title = 'Non-dimensional\nvelocity'
-f.plot_cylinders(time_idx=14)
+f.plot_cylinders(save=True,time_idx=14)
 plt.close('all')
 
-f.plot_cylinders_3D(time_idx=14)
+f.image_filename = 'test_cylinders_3D.png'
+f.plot_cylinders_3D(save=True,time_idx=14)
 plt.close('all')
