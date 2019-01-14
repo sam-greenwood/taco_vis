@@ -2,7 +2,7 @@
 Python module for visualising torsional oscillations (and other 2D core flow data)
 
 
-This module will take 2D polar coordinate data and create still plots or time varying animations of it, with a focus on torsional oscillations within a planetary interior.  Data can be simply contoured or (for torsional waves) be represented as differentially rotating cylinders in either 2D or 3D.
+This module will take 2D polar coordinate data and create still plots or time varying animations of it, with a focus on torsional oscillations within a planetary interior.  Data can be simply contoured or (for torsional wave data only) be represented as differentially rotating cylinders in either 2D or 3D.
 
 <p align="center">
   <img src="paper/images/example_cylinders_3D.png" alt="cartoon" width="450"/>
