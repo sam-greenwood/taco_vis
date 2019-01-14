@@ -5,9 +5,9 @@ Python module for visualising torsional oscillations (and other 2D core flow) fo
 This module will take 2D polar coordinate data and create still plots or time varying animations of it, with a focus on torsional oscillations.  Data can be simply contoured (for any 2D dataset) or be represented as differentially rotating cylinders in either 2D or 3D (for torsional wave data only).
 
 <p align="center">
-  <img src="paper/images/example_contour.png" width="450" align="left" />
-  <img src="paper/images/example_cylinders_2D.png" width="450" align="left" />
-  <img src="paper/images/example_cylinders_3D.png" width="450" align="left" />
+  <img src="paper/images/example_contour.png" width="450" />
+  <img src="paper/images/example_cylinders.png" width="450" />
+  <img src="paper/images/example_cylinders_3D.png" width="450" />
 </p>
 
 
