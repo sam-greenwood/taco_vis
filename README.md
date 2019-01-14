@@ -18,9 +18,9 @@ Animations can be generated simply and quickly with minimal lines of code, e.g.:
 
 `data = np.random.rand(10,10,10)` generate some random data
 
-`f = flow(data)` load data into flow class:
+`f = flow(data)` load data into flow class
 
-`f.plot_contours(animate=True)` plot the animation:
+`f.plot_contours(animate=True)` plot the animation
 
 
 # Installation
