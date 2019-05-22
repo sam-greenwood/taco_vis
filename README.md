@@ -84,7 +84,7 @@ The input data is angular velocity (radians per unit time) and depends on radius
 
 `flow.cylinders_3D(self,animate=False,save=False,time_idx=0)`
 
-The same as 'cylinders' but instead the plot is a 3D representation of the cylidners within a sphere. Although the plot looks 3D it is actually rendered on 2D axes, circumventing the current bugs with drawing on 3D axes in matplotlib.
+The same as 'cylinders' but instead the plot is a 3D representation of the cylinders within a sphere. Although the plot looks 3D it is actually rendered on 2D axes, circumventing the current bugs with drawing on 3D axes in matplotlib.
 
 <p align="center">
   <img src="paper/images/example_cylinders_3D.png" width="450" />
