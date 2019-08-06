@@ -8,7 +8,7 @@ import matplotlib.animation as anim
 
 ########################################################################################
 
-class flow:
+class FLOW:
 
     def __init__(self,data):
 

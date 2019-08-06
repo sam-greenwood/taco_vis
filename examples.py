@@ -2,7 +2,7 @@ import numpy as np
 import scipy.interpolate
 import matplotlib.pyplot as plt
 
-from core_flow import flow
+from core_flow import FLOW
 
 ############################################################################
 #EXAMPLE 1
@@ -26,8 +26,8 @@ for i in range(r):
 
 
 
-#Initialise flow class
-f = flow(u)
+#Initialise FLOW class
+f = FLOW(u)
 
 #Use __call__ method to print user parameters
 f()
@@ -68,8 +68,8 @@ u = np.atleast_3d(u).reshape((radius.size,1,time.size))
 
 
 
-#Initialise flow class
-f = flow(u)
+#Initialise FLOW class
+f = FLOW(u)
 
 #Up the speed of rotation (factor applied to advection of texture)
 f.speed = 5

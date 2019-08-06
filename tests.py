@@ -16,7 +16,7 @@ TH,R,T = np.meshgrid(theta,radius,time)
 data = flow_func(R,TH,T)
 
 #Read data into flow class
-f = cf.flow(data)
+f = cf.FLOW(data)
 
 #Output movie and images should be the same as contained in the 'test_files' folder of this repo.
 
@@ -29,7 +29,7 @@ plt.close('all') #If plotting another image, close this animation figure first.
 
 #Test 2D datasets plots
 data = data[:,14,:] #take a slice in theta and retain a 3D array
-f = cf.flow(data)
+f = cf.FLOW(data)
 
 #Resize number of theta points
 f.th_resolution = 10
