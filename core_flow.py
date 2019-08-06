@@ -17,20 +17,34 @@ class flow:
 
         Parameters
         ----------
-        data: 3D numpy array where the values represent angular velocity. The shape of the
-        array should represent the number of data points in radius, theta and time respectively
+        data: 3D or 2D numpy array where the values represent angular velocity. The shape of the
+        array should represent the number of data points in radius, theta and time respectively (for 3D)
+        or just radius and time (for 2D axisymmetric flows).
 
         e.g. if shape(data) = (5,10,20), then there are assumed 5 points in radius, 10 in theta
-        and 20 in time.
+        and 20 in time (for a 3D array) or if shape(data) = (5,10) then there are assumed 5 points in radius
+        and 20 in time (for a 2D array).
         '''
 
         a = data.shape
 
+        if len(a) == 3:
+            r = a[0]
+            th = a[1]
+            ti = a[2]
+        elif len(a) == 2:
+            r = a[0]
+            th = 0
+            ti = a[1]
+        else:
+            raise ValueError('Input data must be either a 2D or 3D array')
+
+
         #Assume radius, theta and time arrays
         self.data = data
-        self.radius = np.linspace(0,1,a[0])
-        self.theta = np.linspace(0,2*np.pi,a[1])
-        self.time = np.linspace(1,a[2],a[2])
+        self.radius = np.linspace(0,1,r)
+        self.theta = np.linspace(0,2*np.pi,th)
+        self.time = np.linspace(1,ti,ti)
 
         #Default Settings
         self.speed = 1
@@ -48,20 +62,33 @@ class flow:
         #Assume that if only 1 point in theta is given, flow is not theta dependant.
         #Add in more theta points purely for contour plotting resolution
 
-        if a[1] == 1:
-
-            th_resolution = 50
-
-            theta = np.linspace(0,2*np.pi,th_resolution)
-            temp = np.zeros((a[0],th_resolution,a[2]))
-            for i in range(a[0]):
-                for j in range(a[2]):
-                    temp[i,:,j] = data[i,0,j]*np.ones(theta.size)
-
-            self.data = temp
-            self.theta = theta
-
+        if th == 0:
+            self.th_resolution = 50
     #################################
+
+    #Define th_resolution as a property such that data is resized automatically if it changed
+    #from the default value.
+    @property
+    def th_resolution(self):
+        return self.__th_resolution
+
+    @th_resolution.setter
+    def th_resolution(self, th_resolution):
+        self.__th_resolution = th_resolution
+
+        theta = np.linspace(0,2*np.pi,th_resolution)
+        temp = np.zeros((self.radius.size,th_resolution,self.time.size))
+        for i in range(temp.shape[0]):
+            for j in range(temp.shape[2]):
+                if len(self.data.shape) == 2:
+                    temp[i,:,j] = self.data[i,j]*np.ones(theta.size)
+                else:
+                    temp[i,:,j] = self.data[i,0,j]*np.ones(theta.size)
+
+        self.data = temp
+        self.theta = theta
+
+
 
     def __call__(self):
 

@@ -27,9 +27,20 @@ f.plot_contours(animate=True,save=True)
 plt.close('all') #If plotting another image, close this animation figure first.
 
 
-#Test cylindrical plots
-data = data[:,14,:].reshape((10,1,50)) #take a slice in theta and retain a 3D array
+#Test 2D datasets plots
+data = data[:,14,:] #take a slice in theta and retain a 3D array
 f = cf.flow(data)
+
+#Resize number of theta points
+f.th_resolution = 10
+
+#Test contour plot_contours
+f.colorbar_title = 'Non-dimensional\nvelocity'
+f.image_filename = 'test_contour.png'
+f.plot_contours(save=True,time_idx=14)
+plt.close('all') #If plotting another image, close this animation figure first.
+
+
 
 f.image_filename = 'test_cylinders.png'
 f.colorbar_title = 'Non-dimensional\nvelocity'

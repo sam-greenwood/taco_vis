@@ -1,7 +1,8 @@
 import numpy as np
 import scipy.interpolate
-from core_flow import flow
 import matplotlib.pyplot as plt
+
+from core_flow import flow
 
 ############################################################################
 #EXAMPLE 1
