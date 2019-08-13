@@ -2,7 +2,7 @@ import numpy as np
 import scipy.interpolate
 import matplotlib.pyplot as plt
 
-from core_flow import FLOW
+from taco_vis import FLOW
 
 ############################################################################
 #EXAMPLE 1

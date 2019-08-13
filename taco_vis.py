@@ -24,6 +24,9 @@ class FLOW:
         e.g. if shape(data) = (5,10,20), then there are assumed 5 points in radius, 10 in theta
         and 20 in time (for a 3D array) or if shape(data) = (5,10) then there are assumed 5 points in radius
         and 20 in time (for a 2D array).
+
+        For contour plotting 2D datasets, by default 50 points in theta are created. This can be changed by settings
+        the FLOW.th_resolution attribute to some other number after the class has been initialised if the user wishes.
         '''
 
         a = data.shape

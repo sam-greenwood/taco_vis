@@ -1,5 +1,5 @@
 ---
-title: core_flow(?): A Python package for visualising cylindrical waves'
+title: Torsional Axisymmetric Core Oscillations Visualiser (TACO-VIS): A python module for animating torsional wave data for fluid planetary cores.'
 tags:
   - Python
   - geophysics
@@ -13,6 +13,10 @@ authors:
   - name: Philip W. Livermore
     orcid: 0000-0001-7591-6716
     affiliation: 1
+
+  -name: Grace Cox
+
+
 affiliations:
  - name: School of Earth and Environment, University of Leeds, Leeds, LS2 9JT
    index: 1
@@ -20,10 +24,9 @@ date: 8 January 2019
 bibliography: bibliography.bibtex
 ---
 
-
 # Summary
 
-core_flow provides a simple set of python visualisation tools for 2D flow velocity data from fluid planetary interiors. It is mainly intended for animating torsional wave models for publication and presentation purposes. core_flow is a lightweight module built only upon the common numpy/matplotlib python packages and is free to be used and modified as the user requires. It may also be used for contouring and animating any set of 2D dataset such as other components of fluid velocity from models/simulations in polar coordinates.
+TACO-VIS provides a simple set of python visualisation tools for 2D flow velocity data from fluid planetary interiors. It is mainly intended for animating torsional wave models for publication and presentation purposes. TACO-VIS is a lightweight module built only upon the common numpy/matplotlib python packages and is free to be used and modified as the user requires.
 
 # Background
 
@@ -40,29 +43,26 @@ In rapidly-rotating planets such as Earth, one important type of dynamical behav
 
 
 
-From an initial starting configuration, the azimuthal velocity distribution of the cylinders propagates across the core owing to the restoring force of the magnetic field that threads through the cylinders. Because of this modulating effect from the magnetic field, observations of torsional oscillations can constrain the strength of the magnetic field hidden deep inside the core.
+From an initial starting configuration, the azimuthal (longitudinal) velocity distribution of the cylinders propagates across the core owing to the restoring force of the magnetic field that threads through the cylinders. Because of this spatially dependant modulating effect from the magnetic field, observations of torsional oscillations can constrain the strength of the magnetic field hidden deep inside the core.
 
 
-Although torsional oscillations, given by the azimuthal component of velocity, $u_\phi$, can be fully described by static 2D (the cylindrical radius, $s$ and time, $t$) diagrams [@gillet2010fast; @cox2014forward; @hide2000angular; @teed2018torsional] , such visualisations do not communicate the geometry of the waves within the spherical core.
+Although these torsional oscillations, described by the azimuthal component of velocity, $u_\phi$, can be visualised by static 2D (the cylindrical radius, $s$ and time, $t$) plots [@gillet2010fast; @cox2014forward; @hide2000angular; @teed2018torsional], such diagrams do not communicate the geometry of the waves within the spherical core.
 
 
- In this paper, we present a simple python module which takes planetary core flow data (in polar coordinates) and produces either static plots or animations of it. Data that varies spatially in both radius and azimuth can be contour plotted (figure 2) whilst torsional wave data may be visualised by cylinders in either a 2D or 3D view (figure 3). To make the cylindrical movement visible, we add a dotted-texture to each cylinder, which is advected as a tracer.
+In this paper, we present a simple python module which takes core flow velocity data for torsional waves and produces either static plots or animations. This data may be visualised as a series of rotating concentric cylinders in either a full 3D visualisation (Figure 2) or in 2D as a slice through the equatorial plane (Figure 3). The 2D equatorial plane visualisation may alternatively plot the velocity data by contours rather than concentric cylinders (Figure 4), useful as this does not strictly assume axisymmetry in the data and so flows other than torsional oscillations may actually be represented with this.
+
+To make the cylindrical movement visible, we add a dotted-texture to each cylinder, which is advected as a tracer where positive velocities are taken to be in the eastward (anti-clockwise) direction. The number of cylinders is dictated by the number of radial points in the data and is therefore user controlled.
 
 
-<p align="center">
-  <img src="images/example_contour.png" alt="contour plot" width="600"/>
-</p>
-
-**Figure 2.** Simple contour plot of example data that varies sinusoidally in radius and azimuth.
-
+SPECIFY PACKAGE INCLUDES EXAMPLES
+ADD GRACE (REMOVE FROM Acknowledgements)
 
 
 <p align="center">
   <img src="images/example_cylinders.png" alt="2D cylinders plot" width="600"/>
 </p>
 
-**Figure 3.** 2D visualisation of data from Cox et al. [@cox2014forward] approximated to 15 cylinders The velocity scale shown is non-dimensional.
-
+**Figure 2.** 2D visualisation of data from Cox et al. [@cox2014forward] approximated by 15 cylinders. The azimuthal velocity scale shown is non-dimensional.
 
 
 <p align="center">
@@ -71,17 +71,25 @@ Although torsional oscillations, given by the azimuthal component of velocity, $
 
 **Figure 3.** 3D visualisation of the same data as the previous figure.
 
+<p align="center">
+  <img src="images/example_contour.png" alt="contour plot" width="600"/>
+</p>
 
-#### Benefits of core_flow include:
+**Figure 4.** Simple contour plot of example data that varies sinusoidally in radius and azimuth.
 
-* The tools require only the commonly available Python packages numpy and matplotlib.
-* Generating an animation can be done in just 1 line of code.
-* All plots and movies are of publication grade, with user choices for the resolution and frame rate of saved images/movie files.
-* The matplotlib animations draw fast enough to be suitable to be viewed live without the need to encode to a movie file first.
+
+Examples of how to generate animations as well as full documentation are included within the repository for this code.
+
+#### Benefits of TACO-VIS include:
+
+* The tools require only the commonly available Python packages numpy and matplotlib and the well maintained ffmpeg framework.
+* Generating an animation can be done in just a simple few lines of code.
+* All plots and movies are of publication grade, with user choices for the titles, resolution and frame rate of saved images/movie files.
+* The matplotlib animations often draw fast enough to be suitable to be viewed live without the need to encode to a movie file first.
 
 
 # Acknowledgements
 
-We would like to acknowledge contributions from Grace Cox in both feedback on the animations and the use of her data for the example figure.
+SG acknowledges internship funding from the School of Earth and Environment, University of Leeds. PWL was partially supported by Natural Environment Research Council grant number NE/I012052/1.
 
 # References
