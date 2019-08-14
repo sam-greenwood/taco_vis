@@ -2,6 +2,8 @@ import taco_vis as tv
 import numpy as np
 import matplotlib.pyplot as plt
 
+print('Output movie and images should be the same as contained in the \'test_files\' folder of this repo')
+
 ########################
 #Create example dataset:
 def flow_func(radius,theta,time):
@@ -18,7 +20,6 @@ data = flow_func(R,TH,T)
 #Read data into flow class
 f = tv.FLOW(data)
 
-#Output movie and images should be the same as contained in the 'test_files' folder of this repo.
 
 #Test contour plot_contours
 f.colorbar_title = 'Non-dimensional\nvelocity'
@@ -41,11 +42,11 @@ f.plot_contours(save=True,time_idx=14)
 plt.close('all') #If plotting another image, close this animation figure first.
 
 
-
 f.image_filename = 'test_cylinders.png'
 f.colorbar_title = 'Non-dimensional\nvelocity'
 f.plot_cylinders(save=True,time_idx=14)
 plt.close('all')
+
 
 f.image_filename = 'test_cylinders_3D.png'
 f.plot_cylinders_3D(save=True,time_idx=14)

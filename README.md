@@ -116,6 +116,10 @@ fps: (int) frames per second movie files are saved with.
 c_scale: (float) The range of the colorbar which runs from -c_scale through to +c_sale. By default the maximum amplitude within the dataset
 
 
+# Tests
+
+A test python script is included. Running this script tests running a live animation and saving image files that should match those provided in the `/test_files` directory within this repository
+
 # Known issues
 
 You may run into problems with matplotlib interfacing with ffmpeg to save animations.

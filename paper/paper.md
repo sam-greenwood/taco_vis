@@ -15,12 +15,16 @@ authors:
     affiliation: 1
 
   -name: Grace Cox
+   affiliation: 2
 
 
 affiliations:
  - name: School of Earth and Environment, University of Leeds, Leeds, LS2 9JT
    index: 1
-date: 8 January 2019
+ - name: Dublin Institute for Advanced Studies, Geophysics Section, Dublin, Ireland
+   index: 2
+
+date: 14 August 2019
 bibliography: bibliography.bibtex
 ---
 
