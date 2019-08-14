@@ -7,24 +7,14 @@ TACO-VIS provides a simple set of python visualisation tools for 2D flow velocit
 
 Animations can be generated simply and quickly with minimal lines of code, e.g.:
 
-`import numpy as np`
+```
+import numpy as np
+from taco_vis import FLOW
+data = np.random.rand(10,10) #Import and generate some random data
 
-`from taco_vis import FLOW`
-
-`data = np.random.rand(10,10,10)` generate some random data
-
-`f = FLOW(data)` load data into FLOW class
-
-`f.plot_contours(animate=True)` plot the animation
-
-
-# Installation
-
-Python 3, numpy and matplotlib (and ffmpeg to save movie files) are required for this module to run. Clone/download this repository then either:
-1. copy taco_vis.py to your working directory (if you just want this accessible from that directory) and install the required dependencies
-2. run the setup file with "python setup.py" from the command line, installing the module and it's dependencies.
-
-You'll need to install ffmpeg if not installed already, which can be obtained with instructions from https://ffmpeg.org
+f = FLOW(data)
+f.plot_contours(animate=True) #Create instance of FLOW class and use it to plot an animation.
+```
 
 # Dependencies
 1. Python 3
@@ -32,6 +22,11 @@ You'll need to install ffmpeg if not installed already, which can be obtained wi
 3. matplotlib
 4. ffmpeg framework (for saving animations as movie files)
 
+# Installation
+
+Python 3, numpy and matplotlib are required for this module to produce the animations and ffmpeg to save them. Assuming you have at least python 3, numpy and matplotlib installed, clone/download this repository then run the setup file with "python setup.py" from the command. This allows taco_vis to be imported from within the python environment, otherwise `taco_vis.py` must always be present in your working directory.
+
+ffmpeg can be obtained with instructions from https://ffmpeg.org
 
 # Usage
 
@@ -39,9 +34,10 @@ data must be a 2D or 3D numpy array. The dimensions of the array correspond to t
 
 Animations and figures are generated with the 'FLOW' class, which is initialised with the data array:
 
-`from taco_vis import FLOW`
-
-`f = FLOW(data)`
+```
+from taco_vis import FLOW
+f = FLOW(data)
+```
 
 
 There are 3 types of plot available with the following methods: plot_contours, plot_cylinders and plot_cylinders_3D (detailed in full below). The same 3 keyword arguments are available for each:
@@ -85,6 +81,8 @@ A filled contour plot is produced of the data, which does not strictly need to b
 Default settings for the appearance of the plots are attributes of the FLOW class. Current settings can be seen by the call method of the class:
 
 ```
+>>> from taco_vis import FLOW
+>>> f = FLOW(data)
 >>> f()
 
 CURRENT SETTINGS ---------------
