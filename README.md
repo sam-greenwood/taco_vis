@@ -13,8 +13,12 @@ from taco_vis import FLOW
 data = np.random.rand(10,10) #Import and generate some random data
 
 f = FLOW(data)
-f.plot_contours(animate=True) #Create instance of FLOW class and use it to plot an animation.
+f.plot_cylinders_3D(animate=True) #Create instance of FLOW class and use it to plot an animation.
 ```
+
+<p align="center">
+  <img src="paper/images/example_cylinders_3D.png" width="450" />
+</p>
 
 # Dependencies
 1. Python 3
