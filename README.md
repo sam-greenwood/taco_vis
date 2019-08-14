@@ -118,7 +118,11 @@ c_scale: (float) The range of the colorbar which runs from -c_scale through to +
 
 # Tests
 
-A test python script is included. Running this script tests running a live animation and saving image files that should match those provided in the `/test_files` directory within this repository
+A test python script is included. Running this script tests a live animation and saving image files that should match those provided in the `/test_files` directory within this repository.
+
+# Example
+
+An example python script that produces the 3D animation of the Cox et al. (2013) dataset is also provided in this repository, called `/cox_et_al_animation.py`. A frame of this animation is shown in this repositories accompanying paper along with the full reference for the paper the dataset is taken from.
 
 # Known issues
 

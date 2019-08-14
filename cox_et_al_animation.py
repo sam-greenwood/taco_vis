@@ -24,5 +24,9 @@ f = FLOW(u)
 #Up the speed of texture advection
 f.speed = 5
 
+f.time = np.linspace(0,20,time.size)
+f.title = '%.2f years'
+f.colorbar_title = 'Velocity\n(dimensionless)'
+
 #Animate
 f.plot_cylinders_3D(animate=True)
