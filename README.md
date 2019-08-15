@@ -74,7 +74,7 @@ The same as 'cylinders' but instead the plot is a 3D representation of the cylin
 
 `FLOW.plot_contours(self, animate=False, save=False, time_idx=0)`
 
-A filled contour plot is produced of the data, which does not strictly need to be axisymmetric. at each time interval. The colour scale is automatically scaled to the values within the data and to be symmetric about a value of 0.
+A filled contour plot of the data is produces, which does not strictly need to be axisymmetric and hence the data array may be 3D (radius, theta, time).
 
 <p align="center">
   <img src="paper/images/example_contour.png" width="450" />
