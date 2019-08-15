@@ -114,12 +114,13 @@ class FLOW:
     def plot_cylinders(self, animate=False, save=False, time_idx=0):
 
         '''
-        Method for plotting flow as concentric cylinders e.g. for torsional oscillations
+        Method for plotting flow as 2D concentric cylinders in an equitorial plane view.
 
         Keyword arguments:
 
             'animate' - bool. If True will animate the plot (default: False)
             'save'    - bool. If True the plot will be saved rather than plotted (default: False)
+            'time_idx'- int. If animate is False, a still image will be plotted at this time index.
 
         '''
 
@@ -174,12 +175,13 @@ class FLOW:
     def plot_cylinders_3D(self, animate=False, save=False, time_idx=0):
 
         '''
-        Method for plotting flow as 3D concentric cylinders e.g. for torsional oscillations
+        Method for plotting flow as 3D concentric cylinders.
 
         Keyword arguments:
 
             'animate' - bool. If True will animate the plot (default: False)
             'save'    - bool. If True the plot will be saved rather than plotted (default: False)
+            'time_idx'- int. If animate is False, a still image will be plotted at this time index.
 
         '''
 
@@ -240,6 +242,7 @@ class FLOW:
 
             'animate' - bool. If True will animate the plot, default: False
             'save'    - bool. If True the plot will be saved rather than plotted  default: False
+            'time_idx'- int. If animate is False, a still image will be plotted at this time index.
 
         '''
 
