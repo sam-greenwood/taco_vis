@@ -2,7 +2,7 @@
 A python module for animating torsional wave data for fluid planetary cores.
 
 
-TACO-VIS provides a simple set of python visualisation tools for 2D flow velocity data from fluid planetary interiors. It is mainly intended for animating torsional wave models for publication and presentation purposes. TACO-VIS is a lightweight module built only upon the common numpy/matplotlib python packages and is free to be used and modified as the user requires.
+TACO-VIS provides a simple set of python visualisation tools for fluid flow velocity data from fluid planetary interiors with a focus on animating torsional wave models for publication and presentation purposes. TACO-VIS is a lightweight module built only upon the common numpy/matplotlib python packages and is free to be used and modified as the user requires.
 
 
 Animations can be generated simply and quickly with minimal lines of code, e.g.:
