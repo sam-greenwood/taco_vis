@@ -5,5 +5,5 @@ setup(name='taco_vis',
       description='Torsional Axisymmetric Core Oscillation Visualiser',
       author='Sam Greenwood',
       author_email='ee12sg@leeds.ac.uk',
-      py_modules=['taco_vis'],
+      py_modules=['taco_vis']
      )

@@ -28,8 +28,7 @@ f.plot_contours(animate=True,save=True)
 plt.close('all') #If plotting another image, close this animation figure first.
 
 
-#Test 2D datasets plots
-data = data[:,14,:] #take a slice in theta and retain a 3D array
+#Create class
 f = tv.FLOW(data)
 
 #Resize number of theta points
