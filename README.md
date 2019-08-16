@@ -33,7 +33,7 @@ ffmpeg can be obtained with instructions from https://ffmpeg.org
 
 # Usage
 
-data must be angular velocity values in either a 2D or 3D numpy array. The dimensions of the array correspond to the number of points in radius/time (for 2D) or radius/azimuth/time (3D) repsectively. The data is also assumed to be on a regular grid with radius in the domain [0,1] and azimuth between [0, 2pi].
+Data must be angular velocity values in either a 2D or 3D numpy array. The dimensions of the array correspond to the number of points in radius/time (for 2D) or radius/azimuth/time (3D) repsectively. The data is also assumed to be on a regular grid with radius in the domain [0,1] and azimuth between [0, 2pi].
 
 Animations and figures are generated with the 'FLOW' class, which is initialised with the data array:
 
@@ -43,7 +43,7 @@ f = FLOW(data)
 ```
 
 
-There are 3 types of plot available with the following methods: plot_contours, plot_cylinders and plot_cylinders_3D (detailed in full below). The same 3 keyword arguments are available for each:
+There are 3 types of plot available with the following methods: plot_contours, plot_cylinders and plot_cylinders_3D (detailed in full below). Animations or still images may be plotted and/or saved to disk for each of the style of plots provided. The same 3 keyword arguments are available for each:
 
 1. animate (default = False). If True then a matplotlib animation is created, iterating through the time axis of the data. If False then simply a static plot of one time interval of the data will be created.
 2. save (default = False). If True then the image (if animate is False) or animation (if animate is True) will not be shown but instead saved to the current working directory.
