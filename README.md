@@ -2,8 +2,7 @@
 A python module for animating torsional wave data for fluid planetary cores.
 
 
-TACO-VIS provides a simple set of python visualisation tools for fluid flow velocity data from fluid planetary interiors with a focus on animating torsional wave models for publication and presentation purposes. TACO-VIS is a lightweight module built only upon the common numpy/matplotlib python packages and is free to be used and modified as the user requires.
-
+TACO-VIS provides a simple set of python visualisation tools for fluid flow velocity data from fluid planetary interiors with a focus on animating torsional wave models. TACO-VIS is a lightweight module built only upon the common numpy/matplotlib python packages and is free to be used and modified as the user requires.
 
 Animations can be generated simply and quickly with minimal lines of code, e.g.:
 
@@ -34,7 +33,7 @@ ffmpeg can be obtained with instructions from https://ffmpeg.org
 
 # Usage
 
-data must be a 2D or 3D numpy array. The dimensions of the array correspond to the number of points in radius/time (for 2D) or radius/azimuth/time (3D) repsectively. The data is also assumed to be on a regular grid with radius in the domain [0,1] and azimuth between [0, 2pi].
+data must be angular velocity values in either a 2D or 3D numpy array. The dimensions of the array correspond to the number of points in radius/time (for 2D) or radius/azimuth/time (3D) repsectively. The data is also assumed to be on a regular grid with radius in the domain [0,1] and azimuth between [0, 2pi].
 
 Animations and figures are generated with the 'FLOW' class, which is initialised with the data array:
 
@@ -54,7 +53,7 @@ There are 3 types of plot available with the following methods: plot_contours, p
 
 `FLOW.plot_cylinders(self, animate=False, save=False, time_idx=0)`
 
-This produces a 2D plot of a slice through the equitorial plane with concentric circles representing the concentric cylinders (with radii at the radial grid points in the data). A series of black dots are plotted on each cylinder and are advected to visualise the sense of rotation. The cylinders are coloured by the value of velocity at that time interval.
+This produces a 2D plot of a slice through the equitorial plane with concentric circles representing the concentric cylinders (with as many cylinders as there are radial grid points in the data). A series of black dots are plotted on each cylinder and are advected to visualise the sense of rotation. The cylinders are coloured by the value of velocity at that time interval.
 
 <p align="center">
   <img src="paper/images/example_cylinders.png" width="450" />
