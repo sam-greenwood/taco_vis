@@ -1,5 +1,5 @@
 ---
-title: Torsional Axisymmetric Core Oscillations Visualiser (TACO-VIS): A python module for animating torsional wave data for fluid planetary cores.
+title: 'Torsional Axisymmetric Core Oscillations Visualiser (TACO-VIS): A python module for animating torsional wave data for fluid planetary cores'
 tags:
   - Python
   - geophysics
@@ -13,17 +13,13 @@ authors:
   - name: Philip W. Livermore
     orcid: 0000-0001-7591-6716
     affiliation: 1
-
-  -name: Grace Cox
-   affiliation: 2
-
-
+  - name: Grace Cox
+    affiliation: 2
 affiliations:
  - name: School of Earth and Environment, University of Leeds, Leeds, LS2 9JT
    index: 1
  - name: Dublin Institute for Advanced Studies, Geophysics Section, Dublin, Ireland
    index: 2
-
 date: 14 August 2019
 bibliography: bibliography.bibtex
 ---
