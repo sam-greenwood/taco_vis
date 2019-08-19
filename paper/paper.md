@@ -34,12 +34,8 @@ The dynamics of liquid planetary cores is fundamental to planetary-scale phenome
 
 In rapidly-rotating planets such as Earth, one important type of dynamical behaviour is longitudinal 'torsional' oscillations of concentric cylinders aligned with the rotation axis, each of which spans the height of the spherical core.
 
-<p align="center">
-  <img src="images/cartoon_cylinders.png" alt="cartoon" width="450"/>
-</p>
 
-
-**Figure 1.** Cartoon conceptually showing the differential rotation of fluid cylinders within a sphere.
+![Figure 1. Cartoon conceptually showing the differential rotation of fluid cylinders within a sphere.](images/cartoon_cylinders.png)
 
 
 From an initial starting configuration, the azimuthal (longitudinal) velocity distribution of the cylinders propagates across the core owing to the restoring force of the magnetic field that threads through the cylinders. Because of this spatially dependant modulating effect from the magnetic field, observations of torsional oscillations can constrain the strength of the magnetic field hidden deep inside the core.
@@ -53,24 +49,13 @@ In this paper, we present a simple python module which takes core flow velocity 
 To make the cylindrical movement visible, we add a dotted-texture to each cylinder, which is advected as a tracer where positive velocities are taken to be in the eastward (anti-clockwise) direction. The number of cylinders is dictated by the number of radial points in the data and is therefore user controlled.
 
 
-<p align="center">
-  <img src="images/example_cylinders.png" alt="2D cylinders plot" width="600"/>
-</p>
-
-**Figure 2.** 2D visualisation of data from Cox et al. [@cox2013forward] approximated by 15 cylinders. The azimuthal velocity scale shown is non-dimensional.
+![Figure 2. 2D visualisation of data from Cox et al. [@cox2013forward] approximated by 15 cylinders. The azimuthal velocity scale shown is non-dimensional.](images/example_cylinders.png)
 
 
-<p align="center">
-  <img src="images/example_cylinders_3D.png" alt="3D cylinders plot" width="600"/>
-</p>
+![Figure 3. 3D visualisation of the same data as the previous figure.](images/example_cylinders_3D.png)
 
-**Figure 3.** 3D visualisation of the same data as the previous figure.
 
-<p align="center">
-  <img src="images/example_contour.png" alt="contour plot" width="600"/>
-</p>
-
-**Figure 4.** Simple contour plot of example data that varies sinusoidally in radius and azimuth.
+![Figure 4. Simple contour plot of example data that varies sinusoidally in radius and azimuth.](images/example_contour.png)
 
 
 Examples of how to generate animations as well as full documentation are included within the repository for this code.
