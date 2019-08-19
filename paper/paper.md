@@ -45,7 +45,7 @@ In rapidly-rotating planets such as Earth, one important type of dynamical behav
 From an initial starting configuration, the azimuthal (longitudinal) velocity distribution of the cylinders propagates across the core owing to the restoring force of the magnetic field that threads through the cylinders. Because of this spatially dependant modulating effect from the magnetic field, observations of torsional oscillations can constrain the strength of the magnetic field hidden deep inside the core.
 
 
-Although these torsional oscillations, described by the azimuthal component of velocity, $u_\phi$, can be visualised by static 2D (the cylindrical radius, $s$ and time, $t$) plots [@gillet2010fast; @cox2014forward; @hide2000angular; @teed2018torsional], such diagrams do not communicate the geometry of the waves within the spherical core.
+Although these torsional oscillations, described by the azimuthal component of velocity, $u_\phi$, can be visualised by static 2D (the cylindrical radius, $s$ and time, $t$) plots [@gillet2010fast; @cox2013forward; @hide2000angular; @teed2018torsional], such diagrams do not communicate the geometry of the waves within the spherical core.
 
 
 In this paper, we present a simple python module which takes core flow velocity data for torsional waves and produces either static plots or animations. This data may be visualised as a series of rotating concentric cylinders in either a full 3D visualisation (Figure 2) or in 2D as a slice through the equatorial plane (Figure 3). The 2D equatorial plane visualisation may alternatively plot the velocity data by contours rather than concentric cylinders (Figure 4), useful as this does not strictly assume axisymmetry in the data and so flows other than torsional oscillations may actually be represented with this.
@@ -57,7 +57,7 @@ To make the cylindrical movement visible, we add a dotted-texture to each cylind
   <img src="images/example_cylinders.png" alt="2D cylinders plot" width="600"/>
 </p>
 
-**Figure 2.** 2D visualisation of data from Cox et al. [@cox2014forward] approximated by 15 cylinders. The azimuthal velocity scale shown is non-dimensional.
+**Figure 2.** 2D visualisation of data from Cox et al. [@cox2013forward] approximated by 15 cylinders. The azimuthal velocity scale shown is non-dimensional.
 
 
 <p align="center">
