@@ -104,7 +104,7 @@ Speed: (float) Factor applied to the movement of the texture of the cylinders an
 
 colorbar_title: (string) The title for the colorbar.
 
-title: (string, with formatting) Title for the figure. Internally the title is set with `plt.title(FLOW.title % FLOW.time[i])`, where FLOW.time[i] is the current iterations value for time that is passed into the string with formatting. By default FLOW.time is assumed to be an array ranging from 1 through to the size of the last dimension of the data (i.e. number of points in time) but can be set to another array if the user wishes.
+title: (string, with formatting) Title for the figure. Internally the title is set with `plt.title(FLOW.title % FLOW.time[i])`, where `FLOW.time[i]` is the current iterations value for time that is passed into the string with formatting. By default `FLOW.time` is assumed to be an array ranging from 1 through to the size of the last dimension of the data (i.e. number of points in time) but can be set to another array if the user wishes.
 
 movie_filename: (string) filename that movie files will be saved to. Type of movie file (e.g. mp4, avi etc.) is specified by the extension.
 
