@@ -127,7 +127,7 @@ An example python script that produces the 3D animation of the Cox et al. (2013)
 
 # Bug reporting and contributions
 
-If you find a bug, please raise it within the issues on this repository and I'll work with you to fix it. I'm also happy to receive contributions towards the code if you have any ideas for improving/widening it's functionality.
+If you find a bug, please raise it within the issues on this repository and I'll work with you to fix it. I'm currently not taking external contributions to the code but will endevour to communicate and solve any bugs that are found.
 
 # Known issues
 
