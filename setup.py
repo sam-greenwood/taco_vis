@@ -9,7 +9,7 @@ setup(
     url="https://github.com/sam-greenwood/taco_vis",
     py_modules=["taco_vis"],
     python_requires='>=3',
-    install_requires=['numpy','matplotlib']
+    install_requires=['numpy','matplotlib'],
     classifiers=(
         "Programming Language :: Python",
         "License :: OSI Approved :: MIT License",
