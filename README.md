@@ -27,7 +27,7 @@ f.plot_cylinders_3D(animate=True) #Create instance of FLOW class and use it to p
 
 # Installation
 
-Python 3, numpy and matplotlib are required for this module to produce the animations and ffmpeg to save them. Assuming you have at least python 3, numpy and matplotlib installed, clone/download this repository then run the setup file with "python setup.py install" from the command. This allows taco_vis to be imported from within the python environment, otherwise `taco_vis.py` must always be present in your working directory.
+Python 3, numpy and matplotlib are required for this module to produce the animations and ffmpeg to save them. Assuming you have at least python 3, numpy and matplotlib installed, clone/download this repository then run the setup file with `python setup.py install` from the command. This allows taco_vis to be imported from within the python environment, otherwise `taco_vis.py` must always be present in your working directory.
 
 ffmpeg can be obtained with instructions from https://ffmpeg.org
 
