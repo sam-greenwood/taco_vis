@@ -125,6 +125,10 @@ A test python script is included. Running this script tests a live animation and
 
 An example python script that produces the 3D animation of the Cox et al. (2013) dataset is also provided in this repository, called `/cox_et_al_animation.py`. A frame of this animation is shown in this repositories accompanying paper along with the full reference for the paper the dataset is taken from.
 
+# Bug reporting and contributions
+
+If you find a bug, please raise it within the issues on this repository and I'll work with you to fix it. I'm also happy to receive contributions towards the code if you have any ideas for improving/widening it's functionality.
+
 # Known issues
 
 You may run into problems with matplotlib interfacing with ffmpeg to save animations.
