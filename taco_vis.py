@@ -750,17 +750,9 @@ def cylinder_3D_figure(flow_class, time_idx=0):
         cylinders.append([top[i], bottom[-i - 1]])
         for c in cylinders[-1]:
             c.set_facecolor(
-                cmap(
-                    0.5
-                    * (
-                        1
-                        + (
-                            (data[i + 1, 0, time_idx] + data[i, 0, time_idx])
-                            / 2
-                        )
-                        / c_scale
-                    )
-                )[:-1]
+                cmap(0.5 * (1+ (
+                (data[i + 1, 0, time_idx] + data[i, 0, time_idx])/ 2
+                )/ c_scale))[:-1]
             )
 
     # So they iterate inside out, same as data
