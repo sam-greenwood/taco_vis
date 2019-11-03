@@ -6,13 +6,16 @@ TACO-VIS provides a simple set of python visualisation tools for fluid flow velo
 
 Animations can be generated simply and quickly with minimal lines of code, e.g.:
 
-```
+```py
 import numpy as np
 from taco_vis import FLOW
-data = np.random.rand(10,10) #Import and generate some random data
+
+# Import and generate some random data
+data = np.random.rand(10,10)
 
 f = FLOW(data)
-f.plot_cylinders_3D(animate=True) #Create instance of FLOW class and use it to plot an animation.
+# Create instance of FLOW class and use it to plot an animation.
+f.plot_cylinders_3D(animate=True)
 ```
 
 <p align="center">
@@ -37,7 +40,7 @@ Data must be angular velocity values in either a 2D or 3D numpy array. The dimen
 
 Animations and figures are generated with the 'FLOW' class, which is initialised with the data array:
 
-```
+```py
 from taco_vis import FLOW
 f = FLOW(data)
 ```
@@ -51,7 +54,9 @@ There are 3 types of plot available with the following methods: plot_contours, p
 
 #### cylinders
 
-`FLOW.plot_cylinders(self, animate=False, save=False, time_idx=0)`
+```py
+f.plot_cylinders(animate=False, save=False, time_idx=0)
+```
 
 This produces a 2D plot of a slice through the equitorial plane with concentric circles representing the concentric cylinders (with as many cylinders as there are radial grid points in the data). A series of black dots are plotted on each cylinder and are advected to visualise the sense of rotation. The cylinders are coloured by the value of velocity at that time interval.
 
@@ -61,7 +66,9 @@ This produces a 2D plot of a slice through the equitorial plane with concentric 
 
 #### cylinders_3D
 
-`FLOW.plot_cylinders_3D(self, animate=False, save=False, time_idx=0)`
+```py
+f.plot_cylinders_3D(animate=False, save=False, time_idx=0)
+```
 
 The same as 'cylinders' but instead the plot is a 3D representation of the cylinders within a spherical core.
 
@@ -71,7 +78,9 @@ The same as 'cylinders' but instead the plot is a 3D representation of the cylin
 
 #### contours
 
-`FLOW.plot_contours(self, animate=False, save=False, time_idx=0)`
+```py
+f.plot_contours(animate=False, save=False, time_idx=0)
+```
 
 A filled contour plot of the data is produces, which does not strictly need to be axisymmetric and hence the data array may be 3D (radius, theta, time).
 
@@ -83,7 +92,7 @@ A filled contour plot of the data is produces, which does not strictly need to b
 
 Default settings for the appearance of the plots are attributes of the FLOW class. Current settings can be seen by the call method of the class:
 
-```
+```py
 >>> from taco_vis import FLOW
 >>> f = FLOW(data)
 >>> f()
@@ -134,7 +143,7 @@ If you find a bug, please raise it within the issues on this repository and I'll
 You may run into problems with matplotlib interfacing with ffmpeg to save animations.
 
 If you get an error something along the lines of: `ValueError: Invalid file object: <_io.BufferedReader name=X>` where `X` is some number, your binary of ffmpeg may not be working. This can be common if you are using an environment manager, such as anaconda, that matplotlib is being pointed towards and may be solved by installing the ffmpeg binary to your system yourself and having at the beginning of your python script:
-```
+```py
 import matplotlib
 matplotlib.pyplot.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg'
 ```
