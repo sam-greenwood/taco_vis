@@ -9,6 +9,7 @@ before_install:
   - pip install numpy
   - pip install matplotlib
   - pip install ffmpeg
+  - which ffmpeg
 install:
   - python setup.py install # install packages
 dist: xenial
