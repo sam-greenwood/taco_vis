@@ -91,7 +91,9 @@ class FLOW:
                 if len(self.data.shape) == 2:
                     temp[i, :, j] = self.data[i, j] * np.ones(theta.size)
                 else:
-                    temp[i, :, j] = self.data[i, 0, j] * np.ones(theta.size)
+                    theta_old = np.linspace(0,2*np.pi,self.theta.size)
+                    temp[i, :, j] = np.interp(theta, theta_old,
+                                              self.data[i, :, j])
 
         self.data = temp
         self.theta = theta
@@ -566,6 +568,8 @@ def cylinder_figure(flow_class, time_idx=0):
                 )
             )[:-1]
         )
+
+
 
     # Create dots at the center radii of the cyclinders
     r = np.zeros(0)
