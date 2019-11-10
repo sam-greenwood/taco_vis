@@ -58,7 +58,7 @@ There are 3 types of plot available with the following methods: plot_contours, p
 f.plot_cylinders(animate=False, save=False, time_idx=0)
 ```
 
-This produces a 2D plot of a slice through the equitorial plane with concentric circles representing the concentric cylinders (with as many cylinders as there are radial grid points in the data). A series of black dots are plotted on each cylinder and are advected to visualise the sense of rotation. The cylinders are coloured by the value of velocity at that time interval.
+This produces a 2D plot of a slice through the equitorial plane with concentric circles representing the concentric cylinders (with as many cylinders as there are radial grid points in the data). A series of black dots are plotted on each cylinder and are advected to visualise the sense of rotation. The cylinders are coloured by the value of velocity at that time interval (right of figure below).
 
 
 #### cylinders_3D
@@ -67,7 +67,7 @@ This produces a 2D plot of a slice through the equitorial plane with concentric 
 f.plot_cylinders_3D(animate=False, save=False, time_idx=0)
 ```
 
-The same as 'cylinders' but instead the plot is a 3D representation of the cylinders within a spherical core.
+The same as 'cylinders' but instead the plot is a 3D representation of the cylinders within a spherical core (left of figure below).
 
 <p align="center">
   <img src="paper/images/example_3D_and_2D.png" width="450" />
