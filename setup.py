@@ -8,7 +8,7 @@ setup(
     author_email="ee12sg@leeds.ac.uk",
     url="https://github.com/sam-greenwood/taco_vis",
     py_modules=["taco_vis"],
-    python_requires='>=3',
+    python_requires='>=3.5',
     install_requires=['numpy','matplotlib'],
     setup_requires=['numpy','matplotlib'],
     classifiers=(
