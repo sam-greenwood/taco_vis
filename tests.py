@@ -20,8 +20,10 @@ data = flow_func(R, TH, T)
 # Read data into flow class
 f = tv.FLOW(data)
 
+assert np.min(f.data) < 0, 'Data has no negative values'
+assert np.max(f.data) > 0, 'Data has no positive values'
 
-# Test contour plot_contours
+# Test animate contour plot_contours
 f.colorbar_title = "Non-dimensional\nvelocity"
 f.movie_filename = "test_contour.mp4"
 f.plot_contours(animate=True, save=True)
