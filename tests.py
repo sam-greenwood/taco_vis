@@ -1,6 +1,7 @@
 import taco_vis as tv
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 
 ########################
@@ -29,6 +30,7 @@ f.movie_filename = "test_contour.mp4"
 f.plot_contours(animate=True, save=True)
 # If plotting another image, close this animation figure first.
 plt.close("all")
+assert os.path.isfile(f.movie_filename), 'File {} does not exist after saving'.format(f.movie_filename)
 
 
 # Create class
@@ -43,6 +45,7 @@ f.image_filename = "test_contour.png"
 f.plot_contours(save=True, time_idx=14)
 # If plotting another image, close this animation figure first.
 plt.close("all")
+assert os.path.isfile(f.image_filename), 'File {} does not exist after saving'.format(f.movie_filename)
 
 
 f.image_filename = "test_cylinders.png"
@@ -50,9 +53,11 @@ f.colorbar_title = "Non-dimensional\nvelocity"
 f.plot_cylinders(save=True, time_idx=14)
 # If plotting another image, close this animation figure first.
 plt.close("all")
+assert os.path.isfile(f.image_filename), 'File {} does not exist after saving'.format(f.movie_filename)
 
 
 f.image_filename = "test_cylinders_3D.png"
 f.plot_cylinders_3D(save=True, time_idx=14)
 # If plotting another image, close this animation figure first.
 plt.close("all")
+assert os.path.isfile(f.image_filename), 'File {} does not exist after saving'.format(f.movie_filename)
