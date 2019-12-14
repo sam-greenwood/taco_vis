@@ -1,6 +1,8 @@
 # Torsional Axisymmetric Core Oscillations Visualiser (TACO-VIS)
+
 A python module for animating torsional wave data for fluid planetary cores.
 
+[![Build Status](https://travis-ci.org/sam-greenwood/taco_vis.svg?branch=master)](https://travis-ci.org/sam-greenwood/taco_vis)
 
 TACO-VIS provides a simple set of python visualisation tools for fluid flow velocity data from fluid planetary interiors with a focus on animating torsional wave models. TACO-VIS is a lightweight module built only upon the common numpy/matplotlib python packages and is free to be used and modified as the user requires.
 
