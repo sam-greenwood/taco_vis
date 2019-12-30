@@ -10,10 +10,14 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../'))
 
+# 
+# from recommonmark.parser import CommonMarkParser
+# source_parsers = {'.md': CommonMarkParser}
+# source_suffix = ['.rst', '.md']
 
 # -- Project information -----------------------------------------------------
 
@@ -32,7 +36,10 @@ release = '1.0'
 # ones.
 extensions = [
     'sphinx_gallery.gen_gallery',
-]
+    'sphinx.ext.autodoc',
+    'sphinx.ext.coverage',
+    'sphinx.ext.napoleon',
+    'recommonmark']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -81,3 +88,12 @@ sphinx_gallery_conf = {
     "image_scrapers": ('matplotlib'),
     'first_notebook_cell': ("%matplotlib inline\n"),
 }
+
+
+def skip(app, what, name, obj, would_skip, options):
+    if name == "__init__" or name == "__call__":
+        return False
+    return would_skip
+
+def setup(app):
+    app.connect("autodoc-skip-member", skip)

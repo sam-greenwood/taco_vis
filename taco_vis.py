@@ -8,29 +8,34 @@ import matplotlib.animation as anim
 
 ###############################################################################
 
-
 class FLOW:
+    '''
+    Main class whose methods may be used to produce plots.
+    Settings applied to the plots are stored as attributes to any instance of
+    this class which can be changed by the user. Use the `__call__()` method
+    to see what settings are available and their current value.
+    '''
+
     def __init__(self, data):
 
         """
-        Initialise flow_class with a given data set.
-
         Parameters
         ----------
-        data: 3D or 2D numpy array where the values represent angular velocity.
-        The shape of the array should represent the number of data points in
-        radius, theta and time respectively (for 3D) or just radius and time
-        (for 2D axisymmetric flows).
+        data: 3D or 2D numpy array
+                Values representing angular velocity.
+                The shape of the array should represent the number of data
+                points in radius, theta and time respectively (for 3D) or just
+                radius and time (for 2D axisymmetric flows).
 
-        e.g. if shape(data) = (5,10,20), then there are assumed 5 points in
-        radius, 10 in theta and 20 in time (for a 3D array) or if
-        shape(data) = (5,10) then there are assumed 5 points in radius and 20
-        in time (for a 2D array).
+                e.g. if shape(data) = (5,10,20), then there are assumed 5 points
+                in radius, 10 in theta and 20 in time (for a 3D array) or if
+                shape(data) = (5,10) then there are assumed 5 points in radius
+                and 20 in time (for a 2D array).
 
-        For contour plotting 2D datasets, by default 50 points in theta are
-        created. This can be changed by settings the FLOW.th_resolution
-        attribute to some other number after the class has been initialised if
-        the user wishes.
+                For contour plotting 2D datasets, by default 50 points in theta
+                are created. This can be changed by setting the
+                FLOW.th_resolution attribute to some other number after the
+                class has been initialised if the user wishes.
         """
 
         a = data.shape
@@ -101,7 +106,7 @@ class FLOW:
     def __call__(self):
 
         """
-        Print the current settings of the flow class
+        Print to screen the current settings of the FLOW class
         """
 
         def print_setting(self, settings_txt):
@@ -131,13 +136,16 @@ class FLOW:
         Method for plotting flow as 2D concentric cylinders in an equitorial
         plane view.
 
-        Keyword arguments:
+        Parameters
+        ----------
 
-            'animate' - bool. If True will animate the plot (default: False)
-            'save'    - bool. If True the plot will be saved rather than
-                              plotted (default: False)
-            'time_idx'- int. If animate is False, a still image will be plotted
-                             at this time index.
+            'animate' : bool.
+                If True will animate the plot
+            'save' : bool.
+                If True the plot will be saved rather than plotted
+            'time_idx' : int.
+                If animate is False, a still image will be plotted at this time
+                index.
 
         """
 
@@ -204,15 +212,18 @@ class FLOW:
     def plot_cylinders_3D(self, animate=False, save=False, time_idx=0):
 
         """
-        Method for plotting flow as 3D concentric cylinders.
+        Method for plotting flow as 3D concentric cylinders in an 3D view
 
-        Keyword arguments:
+        Parameters
+        ----------
 
-            'animate' - bool. If True will animate the plot (default: False)
-            'save'    - bool. If True the plot will be saved rather than
-                              plotted (default: False)
-            'time_idx'- int. If animate is False, a still image will be plotted
-                                at this time index.
+            'animate' : bool.
+                If True will animate the plot
+            'save' : bool.
+                If True the plot will be saved rather than plotted
+            'time_idx' : int.
+                If animate is False, a still image will be plotted at this time
+                index.
 
         """
 
@@ -283,15 +294,19 @@ class FLOW:
     def plot_contours(self, animate=False, save=False, time_idx=0):
 
         """
-        Method for plotting flow with filled contours.
+        Method for plotting flow as in an equitorial plane view with filled
+        contours.
 
-        Keyword arguments:
+        Parameters
+        ----------
 
-            'animate' - bool. If True will animate the plot, default: False
-            'save'    - bool. If True the plot will be saved rather than
-                              plotted  default: False
-            'time_idx'- int. If animate is False, a still image will be plotted
-                             at this time index.
+            'animate' : bool.
+                If True will animate the plot
+            'save' : bool.
+                If True the plot will be saved rather than plotted
+            'time_idx' : int.
+                If animate is False, a still image will be plotted at this time
+                index.
 
         """
 
