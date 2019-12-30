@@ -42,7 +42,7 @@ From an initial starting configuration, the azimuthal (longitudinal) velocity di
 
 Although these torsional oscillations, described by the azimuthal component of velocity, $u_\phi$, can be visualised by standard 2D (the cylindrical radius, $s$ and time, $t$) contour plots [@gillet2010fast; @cox2013forward; @hide2000angular; @teed2018torsional], such diagrams do not communicate the geometry of the waves within the spherical core.
 
-In this paper, we present a simple open-source Python module which takes core flow velocity data for torsional waves and produces either static plots or animations. This data may be visualised as a series of rotating concentric cylinders in either a full 3D visualisation or in 2D as a slice through the equatorial plane (Figure 2).
+To address this, we present the first visualisation tool specifically for these oscillations. The Torsional Axisymmetric Core Oscillation VISualiser (TACO-VIS) is a simple open-source Python module which takes core flow velocity data for torsional waves and produces either static plots or animations. This data may be visualised as a series of rotating concentric cylinders in either a full 3D visualisation or in 2D as a slice through the equatorial plane (Figure 2).
 
 ![Figure 2. 3D (left) and 2D (right) visualisation of data from Cox et al. [@cox2013forward] approximated by 15 cylinders. The azimuthal velocity scale shown is non-dimensional.](images/example_3D_and_2D.png)
 
