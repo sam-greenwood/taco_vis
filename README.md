@@ -28,7 +28,7 @@ f.plot_cylinders_3D(animate=True)
 1. Python 3.5+
 2. numpy
 3. matplotlib
-4. ffmpeg framework (for saving animations as movie files)
+4. ffmpeg (for saving animations as movie files)
 
 # Installation
 
