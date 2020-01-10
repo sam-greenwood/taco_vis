@@ -2,7 +2,7 @@
 
 A python module for animating torsional wave data for fluid planetary cores.
 
-[![Build Status](https://travis-ci.org/sam-greenwood/taco_vis.svg?branch=master)](https://travis-ci.org/sam-greenwood/taco_vis)
+[![Build Status](https://travis-ci.org/sam-greenwood/taco_vis.svg?branch=master)](https://travis-ci.org/sam-greenwood/taco_vis) [![Documentation Status](https://readthedocs.org/projects/taco-vis/badge/?version=latest)](https://taco-vis.readthedocs.io/en/latest/?badge=latest)
 
 TACO-VIS provides a simple set of python visualisation tools for fluid flow velocity data from fluid planetary interiors with a focus on animating torsional wave models. TACO-VIS is a lightweight module built only upon the common numpy/matplotlib python packages and is free to be used and modified as the user requires.
 
@@ -37,6 +37,8 @@ Python 3.5+, numpy and matplotlib are required for this module to produce the an
 ffmpeg can be obtained with instructions from https://ffmpeg.org
 
 # Usage
+
+The documentation can be found at: https://taco-vis.readthedocs.io
 
 Data must be angular velocity values in either a 2D or 3D numpy array. The dimensions of the array correspond to the number of points in radius/time (for 2D) or radius/azimuth/time (3D) repsectively. The data is also assumed to be on a regular grid with radius in the domain [0,1] and azimuth between [0, 2pi].
 
