@@ -44,11 +44,11 @@ Although these torsional oscillations, described by the azimuthal component of v
 
 To address this, we present the first visualisation tool specifically for these oscillations. The Torsional Axisymmetric Core Oscillation VISualiser (TACO-VIS) is a simple open-source Python module which takes core flow velocity data for torsional waves and produces either static plots or animations. This data may be visualised as a series of rotating concentric cylinders in either a full 3D visualisation (Figure 2a) or in 2D as a slice through the equatorial plane (Figure 2b).
 
-![3D (a) and 2D (b) visualisation of data from Cox et al. [@cox2013forward] approximated by 15 cylinders. The azimuthal velocity scale shown is non-dimensional and shared by both a) and b). c) shows a simple contour plot of example data that varies sinusoidally in radius and azimuth, also with a non-dimensional colour scale.](images/all_3_plots.png)
-
 To make the cylindrical movement visible, we add a dotted-texture to each cylinder, which is advected as a tracer where positive velocities are taken to be in the eastward (anti-clockwise) direction. The number of cylinders is dictated by the number of radial points in the data and is therefore user controlled.
 
 The 2D equatorial plane visualisation may alternatively plot the velocity data by contours rather than concentric cylinders (Figure 2c), useful as this does not strictly assume axisymmetry in the data and so flows other than torsional oscillations may actually be represented with this.
+
+![3D (a) and 2D (b) visualisation of data from Cox et al. [@cox2013forward] approximated by 15 cylinders. The azimuthal velocity scale shown is non-dimensional and shared by both a) and b). c) shows a simple contour plot of example data that varies sinusoidally in radius and azimuth, also with a non-dimensional colour scale.](images/all_3_plots.png)
 
 Examples of how to generate animations as well as full documentation are included within the repository for this code.
 
