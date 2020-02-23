@@ -29,7 +29,7 @@ Animations can be generated simply and quickly with minimal lines of code, e.g.:
   # Create instance of FLOW class and use it to plot an animation.
   f.plot_cylinders_3D(animate=True)
 
-.. image:: ./paper/images/example_cylinders_3D.png
+.. image:: ./paper/images/random_3D.png
    :width: 450pt
 
 

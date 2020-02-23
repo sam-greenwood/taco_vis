@@ -36,19 +36,6 @@ class FLOW:
                 are created. This can be changed by setting the
                 FLOW.th_resolution attribute to some other number after the
                 class has been initialised if the user wishes.
-
-                Default settings (self.__call__() method prints settings to screen):
-                self.speed = 1
-
-                self.colorbar_title = "velocity"
-                self.title = "time: %3.1f years"
-
-                self.movie_filename = "output.mp4"
-                self.image_filename = "output.png"
-                self.dpi = 200
-                self.fps = 24
-
-                self.c_scale = maximum magnitude within the data
         """
 
         a = data.shape

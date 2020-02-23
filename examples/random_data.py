@@ -4,7 +4,6 @@ Randomly Generated Data
 
 From the README.
 """
-
 import numpy as np
 from taco_vis import FLOW
 
