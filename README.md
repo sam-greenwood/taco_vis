@@ -21,7 +21,7 @@ f.plot_cylinders_3D(animate=True)
 ```
 
 <p align="center">
-  <img src="paper/images/example_cylinders_3D.png" width="450" />
+  <img src="paper/images/random_3D.png" width="450" />
 </p>
 
 # Dependencies

@@ -17,7 +17,7 @@ TACO-VIS provides a simple set of python visualisation tools for fluid flow velo
 
 Animations can be generated simply and quickly with minimal lines of code, e.g.:
 
-.. code-block::
+.. code-block:: default
 
   import numpy as np
   from taco_vis import FLOW
