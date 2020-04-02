@@ -143,7 +143,7 @@ If you find a bug, please raise it within the issues on this repository and I'll
 
 You may run into problems with matplotlib interfacing with ffmpeg to save animations.
 
-If you get an error something along the lines of: `ValueError: Invalid file object: <_io.BufferedReader name=X>` where `X` is some number, your binary of ffmpeg may not be working. This can be common if you are using an environment manager, such as anaconda, that matplotlib is being pointed towards and may be solved by installing the ffmpeg binary to your system yourself and having at the beginning of your python script:
+If you get an error something along the lines of: `ValueError: Invalid file object: <_io.BufferedReader name=X>` where `X` is some number, your binary of ffmpeg may not be working. This can be common if you are using an environment manager, such as anaconda. Matplotlib is being pointed towards a binary it cannot use and may be solved by installing the ffmpeg binary to your system yourself and having at the beginning of your python script:
 ```py
 import matplotlib
 matplotlib.pyplot.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg'
