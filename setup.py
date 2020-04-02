@@ -1,4 +1,10 @@
-from distutils.core import setup
+#Try to use setuptools if present. If not then python_requires,
+#install_requires and setup_requires will be ignored
+try:
+    from setuptools import setup
+except:
+    from distutils.core import setup
+
 
 setup(
     name="taco_vis",
@@ -11,7 +17,7 @@ setup(
     python_requires='>=3.5',
     install_requires=['numpy','matplotlib'],
     setup_requires=['numpy','matplotlib'],
-    classifiers=(
+    classifiers=[
         "Programming Language :: Python",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -19,5 +25,5 @@ setup(
         "Topic :: Scientific/Engineering :: Visualization",
         "Intended Audience :: Science/Research",
         "Natural Language :: English",
-    ),
+    ],
 )

@@ -413,6 +413,8 @@ def make_cylinders(ax, n):
 
 def make_cylinder_3D(radius, aspect_ratio, height):
 
+    #Define x/y positions for a 3D cylinder
+
     a = radius
     b = a / aspect_ratio
 
