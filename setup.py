@@ -8,7 +8,7 @@ except:
 
 setup(
     name="taco_vis",
-    version="1.0",
+    version="1.1",
     description="Torsional Axisymmetric Core Oscillation Visualiser",
     author="Sam Greenwood",
     author_email="ee12sg@leeds.ac.uk",
