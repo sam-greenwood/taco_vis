@@ -25,14 +25,14 @@ f.plot_cylinders_3D(animate=True)
 </p>
 
 # Dependencies
-1. Python 3.5+
+1. Python 3.6+
 2. numpy
 3. matplotlib
 4. ffmpeg (for saving animations as movie files)
 
 # Installation
 
-Python 3.5+, numpy and matplotlib are required for this module to produce the animations and ffmpeg to save them. Assuming you have at least python 3, numpy and matplotlib installed, clone/download this repository then run the setup file with `python setup.py install` from the command. This allows taco_vis to be imported from within the python environment, otherwise `taco_vis.py` must always be present in your working directory. Tests may be conducted by running the included `tests.py` script. Output files should match those in the `test_files/` directory.
+Python 3.6+, numpy and matplotlib are required for this module to produce the animations and ffmpeg to save them. Assuming you have at least python 3, numpy and matplotlib installed, clone/download this repository then run the setup file with `python setup.py install` from the command. This allows taco_vis to be imported from within the python environment, otherwise `taco_vis.py` must always be present in your working directory. Tests may be conducted by running the included `tests.py` script. Output files should match those in the `test_files/` directory.
 
 ffmpeg can be obtained with instructions from https://ffmpeg.org
 
