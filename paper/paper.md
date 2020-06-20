@@ -18,9 +18,9 @@ authors:
 affiliations:
  - name: School of Earth and Environment, University of Leeds, Leeds, LS2 9JT
    index: 1
- - name: Dublin Institute for Advanced Studies, Geophysics Section, Dublin, Ireland
+ - name: British Geological Survey, Geomagnetism Team, Edinburgh, EH14 4AP
    index: 2
-date: 14 August 2019
+date: 20 June 2020
 bibliography: bibliography.bibtex
 ---
 
