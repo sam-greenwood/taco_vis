@@ -9,6 +9,8 @@ oscillations.
 import numpy as np
 import scipy.interpolate
 import matplotlib.pyplot as plt
+import sys
+sys.path.append('../') #So taco_vis.py is visible to import
 
 from taco_vis import FLOW
 
