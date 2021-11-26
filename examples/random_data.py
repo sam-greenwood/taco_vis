@@ -6,6 +6,8 @@ From the README.
 """
 import numpy as np
 from taco_vis import FLOW
+import sys
+sys.path.append('../') #So taco_vis.py is visible to import
 
 # Import and generate some random data
 data = np.random.rand(10,10)
